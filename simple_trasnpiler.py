@@ -56,7 +56,7 @@ def Transpile_To_C():
 
         elif command[0] == "string":
             name = str(command[1])
-            content = str("".join(command[2:]))
+            content = str(" ".join(command[2:]))
             length = len(content)+1
             var[name] = str("%s")
             c_source.append(f'char {name}[{length}] = "{content}";')
@@ -76,10 +76,10 @@ def Transpile_To_C():
             c_source.append(f"goto {section_to_go};")
 
         elif command[0] == "math":
-            value1 = float(command[1])
-            operan = str(command[2])
-            value2 = float(command[3])
-            result = float(command[4])
+            value1 = command[1]
+            operan = command[2]
+            value2 = command[3]
+            result = command[4]
             c_source.append(f"{result} = {value1} {operan} {value2};")
 
         elif command[0] == "SYSTEM":
@@ -111,7 +111,7 @@ def Main():
         Transpile_To_C()
         Make_Executable()
         print("Sucess!")
-        View_C_Code()
+        #View_C_Code()
     except Exception as error:
         print(error)
 
