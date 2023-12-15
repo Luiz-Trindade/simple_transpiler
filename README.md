@@ -26,10 +26,22 @@ Here is a sample program in the custom language:
 
 ```python
 print Hello, World!
+
 number x 5
+number n1 3.5
+number n2 2.7
+number result 0
+
 string greeting Hello from the transpiler
+
+print \n
 view x
+print \n
 view greeting
-math 3.5 + 2.7 result
-print The result is: result
-end
+print \n
+
+math n1 + n2 result
+
+print The result is:
+view result
+print \n
