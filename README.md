@@ -19,7 +19,7 @@ Distributed under the [GPL3 License](https://www.gnu.org/licenses/gpl-3.0.en.htm
 
 ## Usage
 1. Save your code in a file with the custom programming language syntax.
-2. Run the transpiler using the command: `python3 transpiler.py your_program_file`
+2. Run the transpiler using the command: `python3 simple_transpiler.py your_program_file`
 
 ## Example
 Here is a sample program in the custom language:
