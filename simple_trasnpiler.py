@@ -77,7 +77,7 @@ def Transpile_To_C():
 
         elif command[0] == "math":
             value1 = float(command[1])
-            operan = float(command[2])
+            operan = str(command[2])
             value2 = float(command[3])
             result = float(command[4])
             c_source.append(f"{result} = {value1} {operan} {value2};")
