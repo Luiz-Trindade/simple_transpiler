@@ -22,8 +22,8 @@ Distributed under the [GPL3 License](https://www.gnu.org/licenses/gpl-3.0.en.htm
 1. Save your code in a file with the custom programming language syntax.
 2. Run the transpiler using the command: `python3 simple_transpiler.py your_program_file`
 
-## Example
-Here is a sample program in the custom language:
+## Examples
+1. Here is a sample program in the custom language:
 
 ```python
 print Hello, World!
@@ -45,4 +45,26 @@ math n1 + n2 result
 
 print The result is:
 view result
+newline```
+
+2. Here is a simple counter that counts from 1 to 999999:
+
+```python
+number init 0
+number inc 1
+number goal 999999
+
 newline
+
+section soma
+math init + inc init
+view init
+
+newline
+
+comp init == goal final
+goto soma
+
+section final
+print Fim!
+newline```
