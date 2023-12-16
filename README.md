@@ -45,8 +45,8 @@ math n1 + n2 result
 
 print The result is:
 view result
-newline```
-
+newline
+```
 2. Here is a simple counter that counts from 1 to 999999:
 
 ```python
@@ -67,4 +67,5 @@ goto soma
 
 section final
 print Fim!
-newline```
+newline
+```
