@@ -4,9 +4,14 @@
 # GPL3 License: https://www.gnu.org/licenses/gpl-3.0.en.html#license-text
 
 from sys import argv
-from os import system as S
+from os import system as S, name as OS
 
 c_compiler = "tcc"
+if OS == "posix":
+    pass
+else:
+    c_compiler = "tcc/tcc.exe"
+
 program = str(argv[1])
 source = []
 c_source = [
@@ -126,11 +131,13 @@ def Make_Executable():
         c_file.writelines("\n".join(c_source))
     try:
         print(f"Using '{c_compiler}' as C compiler!")
-        S(f"{c_compiler} -Ofast -flto -finline-functions -funroll-loops -ftree-vectorize {program}.c -o {program}_exec")
+        S(f"{c_compiler} {program}.c -o {program}_exec")
+        #S(f"{c_compiler} -Ofast -flto -finline-functions -funroll-loops -ftree-vectorize {program}.c -o {program}_exec")
         S(f"rm {program}.c")
     except:
         print("Using 'gcc' as C compiler")
-        S(f"gcc -Ofast -flto -finline-functions -funroll-loops -ftree-vectorize {program}.c -o {program}_exec")
+        S(f"gcc {program}.c -o {program}_exec")
+        #S(f"gcc -Ofast -flto -finline-functions -funroll-loops -ftree-vectorize {program}.c -o {program}_exec")
         S(f"rm {program}.c")
 
 def Main():
