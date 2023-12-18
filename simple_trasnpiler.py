@@ -17,7 +17,8 @@ source = []
 c_source = [
     "#include <stdio.h>", 
     "#include <stdlib.h>", 
-    "#include <string.h>", 
+    "#include <string.h>",
+    "#include <unistd.h>", 
     "int main(){"
     ]
 var = {}
@@ -116,6 +117,11 @@ def Transpile_To_C():
 
         elif command[0] == "newline":
             c_source.append('printf("\\n");')
+
+        elif command[0] == "sleep":
+            time_to_sleep = int(float(command[1]) * 1000000)
+            c_source.append("fflush(stdout);")
+            c_source.append(f"usleep({time_to_sleep});")
 
         #Forçar o fim da execução do programa
         elif command[0] == "end":

@@ -9,10 +9,11 @@ This is a simple transpiler written in Python by Luiz Gabriel Magalhães Trindad
 - **Print Statements:** Use the `print` statement to display content on the console.
 - **Variable Declaration:** Declare variables with the `number` and `string` statements.
 - **Variable View:** View the value of a variable using the `view` statement.
-- **Keyboard Input Data:** Use the `input` command to recieve keyboard data.
+- **Keyboard Input Data** Use the `input` command to recieve keyboard data.
 - **Math Operations:** Perform basic mathematical operations with the `math` statement.
 - **System Commands:** Execute system commands using the `SYSTEM` statement.
 - **Control Flow:** Use labels (`section` and `goto`) to control the flow of the program.
+- **Control Time Sleep:** Use `sleep` for waiting.
 - **Program Termination:** Use the `end` statement to terminate the program.
 
 ## License
